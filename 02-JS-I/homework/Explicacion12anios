@@ -1,0 +1,10 @@
+Las variables son como cajas que le ponemos un nombre, para poder ubicarlas despues,
+y luego dentro de las cajas ponemos cosas que vemos a recuperar llamando a la caja
+por su nombre.
+Los strings son palabras, o sea, un conjunto de letras que forman una palabra.
+Las funciones nos ayudan cuando hay un trabajo que se repite. Nosotros le damos los elementos
+y la funcion trabaja con esos elementos y me devuelve el resultado final
+Las declaraciones if sirven para hacer algo, si pasa lo que esta entre parentesis,
+es como decir "Si...?". Por ejemplo, Si llueve? me mojo.
+Un valor booleano es una caja que solo puede ser verdadero o falso. Cosas que solo pueden ser
+verdaderas o falsas son, por ejemplo, la luz que solo puede estar prendida o apagad
