@@ -1,0 +1,6 @@
+El bucle for funciona haciendo un proceso hasta que se da una condicion que lo interrumpe
+Por ejemplo,lavar los platos es un proceso que se repite hasta que se acaban los platos.
+
+El && solo es verdadero cuando se cumplen las dos condiciones simultaneamente
+El || es verdadero con que solo una de las condiciones sea verdadera
+El ! niega la expresion que tiene a continuacion
