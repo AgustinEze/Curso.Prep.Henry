@@ -1,0 +1,4 @@
+Un array es un conjunto de elementos ordenados con un indice. Es similar a las casas en una cuadra.
+Una cuadra es un arreglo de casas, cada una identificada con un numero.
+En un arreglo en programacion es similar, solo que los numeros que identifican a cada elemento son
+sucesivos (0,1,2,3...)
