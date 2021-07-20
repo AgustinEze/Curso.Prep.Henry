@@ -6,11 +6,11 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  var gato={
+  const gato={
     nombre:nombre,
     edad:edad,
-    meow:function(){
-        console.log("Meow!");
+    meow: function(){
+        return 'Meow!';
     }
   }
   return gato;
@@ -149,11 +149,9 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  function calcularPrecioDescuento(){
-    var descuento= producto.precio*producto.porcentajeDeDescuento;
-    return producto.precio-descuento;
+  producto.calcularPrecioDescuento=function (){
+  return this.precio-(this.precio * this.porcentajeDeDescuento);
   }
-  producto[calcularPrecioDescuento];
   return producto;
 }
 

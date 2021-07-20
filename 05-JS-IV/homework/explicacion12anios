@@ -1,0 +1,10 @@
+Los objetos son herramientas que se usan para trabajar con cosas de un modo mas similar a como ya lo hacemos
+por ejemplo, el humano en general es mas o menos siempre igual: tiene una cabeza, dos brazos y 2 piernas. Pero
+cada humano en particular tiene su nombre y apellido, dni, altura, color de piel y pelo, etc. que son diferentes.
+Con los objetos en programacion es similar ya que uno puede definir un objeto general, que va a tener ciertas
+caracteristicas individuales.
+Estas caracteristicas individuales son denominadas con el nombre de propiedades.
+Los metodos son funciones que estan dentro del objeto, o sea, cosas que el objeto puede "hacer"
+El bucle for..in se utiliza para encontrar las claves dentro de un objeto, ya que no estan numeradas sino
+que son palabras
+La notacion de puntos es mucho mas rapida que la de corchetes, pero la de corchetes permite usar variables.
