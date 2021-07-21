@@ -1,0 +1,5 @@
+Para que cada instancia de un objeto no tenga que cargar consigo los metodos, se definen los prototypes, que serian
+como la direccion donde esta el metodo. Entonces cuando una instancia tiene que usar un metodo, en vez de llevarlo consigo
+sabe donde lo puede encontrar
+Los constructores de clase son funciones que nos permiten crear instancias de esa clase, se usan para no repetir codigo
+y para que las instancias tengan las mismas claves, aunque con valores diferentes.
