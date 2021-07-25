@@ -220,6 +220,7 @@ El tag *style*, que se escribe en el <head> del documento, nos permite escribir 
 Pros:
   * Lugar central donde podemos escribir las reglas CSS del documento
   * Podemos compartir reglas entre varios elementos iguales
+
 Cons:
   * No podemos compartir las reglas con *otro* documento HTML.
   * Hay que prestar atención a las reglas, y a qué elementos se aplican.
@@ -245,6 +246,7 @@ Pros:
   * Lugar central donde podemos escribir las reglas CSS del documento
   * Podemos compartir reglas entre varios elementos iguales
   * Podemos compartir reglas entre varios documentos HTML
+
 Cons:
   * Hay que prestar atención a las reglas, y a qué elementos se aplican.
 

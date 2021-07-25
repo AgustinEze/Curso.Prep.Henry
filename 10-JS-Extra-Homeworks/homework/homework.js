@@ -10,6 +10,15 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var arr=[];
+  var claveValor=[];
+  for(let clave in objeto){
+    claveValor.push(clave);
+    claveValor.push(objeto[clave]);
+    arr.push(claveValor);
+    claveValor=[];
+  }
+  return arr;
 }
 
 
@@ -18,6 +27,7 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+
 }
 
 
@@ -43,6 +53,13 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  var arr=numero.toString();
+  for(let i=0;i<arr.length;i++)
+    if(arr[i]!==arr[arr.length-1-i])
+        return "No es capicua";
+
+  return "Es capicua";
+
 }
 
 
@@ -50,6 +67,15 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var str='';
+  for(let i=0;i<cadena.length;i++){
+    if(cadena[i]==='a'||cadena[i]==='b'||cadena[i]==='c')
+        continue;
+    else {
+        str+=(cadena[i]);
+    }
+  }
+  return str;
 }
 
 
@@ -57,6 +83,17 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  var str='';
+  for(let i=0;i<arr.length;i++){
+    for(let j=0;j<arr.length-i-1;j++){
+        if(arr[j].length>arr[j+1].length){
+            str=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=str;
+        }
+    }
+  }
+  return arr;
 }
 
 
