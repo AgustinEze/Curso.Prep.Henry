@@ -103,7 +103,7 @@ function capicua(numero){
         return "No es capicua";
   return "Es capicua";
 }
-
+//'abcjhkkdjlsfhkjfhsdakjhasdf'.split('').filter(letter=>letter!=='a'&&letter!=='b'&&letter!=='c').join('')
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
