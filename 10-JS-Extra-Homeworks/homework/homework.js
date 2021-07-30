@@ -1,26 +1,5 @@
 // No cambies los nombres de las funciones.
 
-function deObjetoAmatriz2(objeto){
-  // Escribe una función que convierta un objeto en una matriz, donde cada elemento representa 
-  // un par clave-valor en forma de matriz.
-  //Ejemplo: 
-  /*objeto({
-      D: 1,
-      B: 2,
-      C: 3
-    }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
-  //Escribe tu código aquí
-  const arr=[];
-
-  for(let clave in objeto){
-    //const claveValor=[];
-    //claveValor.push(clave);
-    //claveValor.push(objeto[clave]);
-    //arr.push(claveValor);
-    arr.push([clave,objeto[clave]]);
-  }
-  return arr;
-}
 function deObjetoAmatriz(objeto){
   // Escribe una función que convierta un objeto en una matriz, donde cada elemento representa
   // un par clave-valor en forma de matriz.
@@ -31,6 +10,13 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+/*  const arr=[];
+
+    for(let clave in objeto){
+      arr.push([clave,objeto[clave]]);
+    }
+    return arr;
+*/
   return Object.entries(objeto);
 }
 
@@ -50,19 +36,16 @@ function numberOfCharacters(string) {
 }
 
 function isUpperCase(letter){
-    return letter.toUpperCase()==letter;//el lenguaje resuelve
+    return letter.toUpperCase()===letter;//el lenguaje resuelve
 }
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-  //var strMayuscula='';
-  //var strMinuscula='';
   const strMayuscula=[];
   const strMinuscula=[];
   for(let i=0;i<s.length;i++){
-    //if(s[i]>='A'&&s[i]<='Z')
     if(isUpperCase(s[i]))
         strMayuscula.push(s[i]);
     else
@@ -81,13 +64,6 @@ function asAmirror(str) {
 
   for(let i=0;i<arr.length;i++){
     arr[i]=arr[i].split('').reverse().join('');//en una sola linea, 1 for menos y un 1 if else menos :D
-/*    for(let j=arr[i].length;j>=0;j--){
-        if(!char)
-            char=arr[i][j];
-        else
-            char+=arr[i][j];
-    }
-    arr[i]=char;*/
   }
   return arr.join(' ');
 } 
@@ -99,12 +75,14 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-  const arr=numero.toString();//123321
+  const arr=numero.toString();
   for(let i=0;i<arr.length/2;i++)
     if(arr[i]!==arr[arr.length-1-i])
         return "No es capicua";
   return "Es capicua";
 }
+
+
 //'abcjhkkdjlsfhkjfhsdakjhasdf'.split('').filter(letter=>letter!=='a'&&letter!=='b'&&letter!=='c').join('')
 function includes(letter){
     const letras=['a','b','c'];
@@ -114,11 +92,8 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-
-  //var str='';
   const str=[];
   for(let i=0;i<cadena.length;i++){
-    //if(cadena[i]==='a'||cadena[i]==='b'||cadena[i]==='c')
     if(includes(cadena[i]))
         continue;
     else {
@@ -127,6 +102,8 @@ function deleteAbc(cadena){
   }
   return str.join('');
 }
+
+
 function sortByLength(a,b){
     if(a.length<b.length)
         return -1;
@@ -134,23 +111,16 @@ function sortByLength(a,b){
         return 1;
     return 0;
 }
-function sortArray(arr) {
+function sortArray(arr) {//puedo resolverlo con un objeto {arr[i].length:[palabras que cumplen]}
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
   const strByLength=[];
-  for(let i=0;i<arr.length;i++){//podria usar un objeto para hacer pares key:value, asi no hago length a cada rato
-/*    for(let j=0;j<arr.length-i-1;j++){
-        if(arr[j].length>arr[j+1].length){
-            str=arr[j];
-            arr[j]=arr[j+1];
-            arr[j+1]=str;*/
-  //arr.sort(sortByLength(arr[i].length,arr[i+1].length));
+  for(let i=0;i<arr.length;i++){
   strByLength.push(arr[i]);
   }
   return strByLength.sort(sortByLength);
 }
-
 //arr.forEach(word=>{
 //   const length=word.length;
 //    if(wordsByLength[length]){
@@ -166,13 +136,11 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí
-  var interseccion=[];
+  const interseccion=[];
 
   for (let i=0;i<arreglo1.length;i++){
-    for(let j=0;j<arreglo2.length;j++){
-        if(arreglo1[i]===arreglo2[j])
-            interseccion.push(arreglo1[i]);
-    }
+    if(arreglo2.includes(arreglo1[i]))
+        interseccion.push(arreglo1[i]);
   }
   return interseccion;
 }
