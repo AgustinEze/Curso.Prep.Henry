@@ -113,16 +113,17 @@ function deleteAbc(cadena){
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
 
-  var str='';
+  //var str='';
+  var str=[];
   for(let i=0;i<cadena.length;i++){
     //if(cadena[i]==='a'||cadena[i]==='b'||cadena[i]==='c')
     if(includes(cadena[i]))
         continue;
     else {
-        str+=(cadena[i]);
+        str.push(cadena[i]);
     }
   }
-  return str;
+  return str.join('');
 }
 
 function sortArray(arr) {
