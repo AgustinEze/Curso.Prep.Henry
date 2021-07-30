@@ -39,15 +39,16 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  var obj ={};
+  const obj ={};
   for(let i=0;i<string.length;i++){
-      if(!obj[string[i]])
-          obj[string[i]]=1;
-      else
+      if(obj[string[i]])
           obj[string[i]]++;
+      else
+          obj[string[i]]=1;
     }
   return obj;
 }
+
 function isUpperCase(letter){
     return letter.toUpperCase()==letter;//el lenguaje resuelve
 }
@@ -56,16 +57,18 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-  var strMayuscula='';
-  var strMinuscula='';
+  //var strMayuscula='';
+  //var strMinuscula='';
+  const strMayuscula=[];
+  const strMinuscula=[];
   for(let i=0;i<s.length;i++){
     //if(s[i]>='A'&&s[i]<='Z')
     if(isUpperCase(s[i]))
-        strMayuscula+=s[i];//podria ser una lista strMayus=[] strMayus.push(s[i])
+        strMayuscula.push(s[i]);
     else
-        strMinuscula+=s[i];
+        strMinuscula.push(s[i]);
   }
-  return strMayuscula+strMinuscula;//podria usar un .join
+  return strMayuscula.join('')+strMinuscula.join('');
 }
 
 function asAmirror(str) {
@@ -74,20 +77,19 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  const arr=str.split(' ');
-  var char;
+  const arr=str.split(' ');//uso una lista para poner cada palabra
 
   for(let i=0;i<arr.length;i++){
-    char='';
-    for(let j=arr[i].length;j>=0;j--){
+    arr[i]=arr[i].split('').reverse().join('');//en una sola linea, 1 for menos y un 1 if else menos :D
+/*    for(let j=arr[i].length;j>=0;j--){
         if(!char)
             char=arr[i][j];
         else
             char+=arr[i][j];
     }
-    arr[i]=char;
+    arr[i]=char;*/
   }
-  return arr.join(' '); //undefined
+  return arr.join(' ');
 } 
 
 
@@ -97,7 +99,7 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-  var arr=numero.toString();//123321
+  const arr=numero.toString();//123321
   for(let i=0;i<arr.length/2;i++)
     if(arr[i]!==arr[arr.length-1-i])
         return "No es capicua";
@@ -125,22 +127,28 @@ function deleteAbc(cadena){
   }
   return str.join('');
 }
-
+function sortByLength(a,b){
+    if(a.length<b.length)
+        return -1;
+    if(a.length<b.length)
+        return 1;
+    return 0;
+}
 function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-  var str='';
+  const strByLength=[];
   for(let i=0;i<arr.length;i++){//podria usar un objeto para hacer pares key:value, asi no hago length a cada rato
-    for(let j=0;j<arr.length-i-1;j++){
+/*    for(let j=0;j<arr.length-i-1;j++){
         if(arr[j].length>arr[j+1].length){
             str=arr[j];
             arr[j]=arr[j+1];
-            arr[j+1]=str;
-        }
-    }
+            arr[j+1]=str;*/
+  //arr.sort(sortByLength(arr[i].length,arr[i+1].length));
+  strByLength.push(arr[i]);
   }
-  return arr;
+  return strByLength.sort(sortByLength);
 }
 
 //arr.forEach(word=>{
