@@ -104,13 +104,19 @@ function capicua(numero){
   return "Es capicua";
 }
 //'abcjhkkdjlsfhkjfhsdakjhasdf'.split('').filter(letter=>letter!=='a'&&letter!=='b'&&letter!=='c').join('')
+function includes(letter){
+    const letras=['a','b','c'];
+    return letras.includes(letter);
+}
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+
   var str='';
   for(let i=0;i<cadena.length;i++){
-    if(cadena[i]==='a'||cadena[i]==='b'||cadena[i]==='c')
+    //if(cadena[i]==='a'||cadena[i]==='b'||cadena[i]==='c')
+    if(includes(cadena[i]))
         continue;
     else {
         str+=(cadena[i]);
