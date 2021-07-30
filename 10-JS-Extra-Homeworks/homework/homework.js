@@ -114,7 +114,7 @@ function deleteAbc(cadena){
   //Escribe tu código aquí
 
   //var str='';
-  var str=[];
+  const str=[];
   for(let i=0;i<cadena.length;i++){
     //if(cadena[i]==='a'||cadena[i]==='b'||cadena[i]==='c')
     if(includes(cadena[i]))
