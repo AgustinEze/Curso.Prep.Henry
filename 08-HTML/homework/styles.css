@@ -1,5 +1,5 @@
 body {background-image: url(./fotoPepe.jpg); background-size: cover;}
-div {}
+div {max-width: 600px; margin: 0 auto;}
 h1 {color: blue;}
 
 #thirdDiv {height: 600px; width: 500px; background: grey;
