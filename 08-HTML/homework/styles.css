@@ -1,9 +1,15 @@
-body {background-image: url(./fotoPepe.jpg); background-size: cover;}
-div {max-width: 600px; margin: 0 auto;}
+body {  background-image: url(./fotoPepe.jpg);
+        background-size: cover;}
+div {   max-width: 600px;
+        margin: 0 auto;}
 h1 {color: blue;}
 
-#thirdDiv {height: 600px; width: 500px; background: grey;
-            padding: 50px; border: 10px solid red;}
+#thirdDiv { height: 600px;
+            width: 500px;
+            background: grey;
+            padding: 50px;
+            border: 10px solid red;}
 
-.spanId {font-size: 18px; margin: 50px;}
+.spanId {font-size: 18px;
+        margin: 50px;}
 img {width: 400px;}
